@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="new-post">
+    <%= form_for(:uploaded_file, url: transactions_new_path) do |f| %>
+      <%= f.label 'Select a file to upload:' %>
+
+      <span class="picture post-images">
+        <%= f.file_field :attachment, class: "btn" %>
+      </span>
+
+      <%= f.submit "New File", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
