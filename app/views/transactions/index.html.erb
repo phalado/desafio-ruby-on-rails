@@ -1,20 +1,24 @@
 <div class="index text-center">
   <% if logged_in? %>
     <h1>Olá <%= current_user.name %></h1>
+    <span class="image"><%= image_tag 'joey.gif' %></span>
+    <% if current_user.admin %>
+      <% @owners.each do |owner| %>
+        <p class="link-paragraph btn">
+        <%= link_to owner, transactions_show_path(name: owner) %>
+      </p>
+      <% end %>
+    <% end %>
   <% else %>
     <h1>Olá</h1>
     <h2>Faça login para ver suas transações</h2>
-  <% end %>
-  <span class="image"><%= image_tag 'joey.gif' %></span>
-  <% if current_user.admin %>
-    <% @owners.each do |owner| %>
-      <p class="link-paragraph btn">
-      <%= link_to owner, transactions_show_path(name: owner) %>
-    </p>
-    <% end %>
-  <% else %>
-    <p class="link-paragraph btn">
-      <%= link_to 'Clique aqui para ver suas transações', transactions_show_path(user: current_user) %>
-    </p>
+    <span class="image"><%= image_tag 'joey.gif' %></span>
+    <h3>Você pode logar com uma conta administrador:</h3>
+    <h4>login admin@admin.com</h4>
+    <h4>senha admin123</h4>
+    <h3>Com uma conta de cliente:</h3>
+    <h4>login joao@bar.com</h4>
+    <h4>senha 123456</h4>
+    <h3>Ou se inscrever</h3>
   <% end %>
 </div>
