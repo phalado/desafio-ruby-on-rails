@@ -1,14 +1,20 @@
-<div class="index">
-  <h1>Adicionar transações</h1>
-  <div class="add-transaction">
-    <%= form_for(:uploaded_file, url: transactions_new_path) do |f| %>
-      <%= f.label 'Selecione um arquivo com trasações:' %>
-
-      <span class="select-box">
-        <%= f.file_field :attachment, :required => true %>
-      </span>
-
-      <%= f.submit "Enviar", class: "fifty-max btn" %>
+<div class="index text-center">
+  <% if logged_in? %>
+    <h1>Olá <%= current_user.name %></h1>
+  <% else %>
+    <h1>Olá</h1>
+    <h2>Faça login para ver suas transações</h2>
+  <% end %>
+  <span class="image"><%= image_tag 'joey.gif' %></span>
+  <% if current_user.admin %>
+    <% @owners.each do |owner| %>
+      <p class="link-paragraph btn">
+      <%= link_to owner, transactions_show_path(name: owner) %>
+    </p>
     <% end %>
-  </div>
+  <% else %>
+    <p class="link-paragraph btn">
+      <%= link_to 'Clique aqui para ver suas transações', transactions_show_path(user: current_user) %>
+    </p>
+  <% end %>
 </div>

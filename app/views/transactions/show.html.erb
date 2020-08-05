@@ -1,2 +1,25 @@
-<h1>Transactions#show</h1>
-<p>Find me in app/views/transactions/show.html.erb</p>
+<% if @my_transactions.empty? %>
+  <h2>Você não tem nenhuma transação registrada</h2>
+<% else %>
+  <table class="table">
+    <tr class="titles">
+      <th>Estabelecimento</th>
+      <th>Data</th>
+      <th>CPF</th>
+      <th>Tipo de transação</th>
+      <th>Cartão</th>
+      <th>Valor</th>
+    </tr>
+    <% @my_transactions.each do |t| %>
+      <tr>
+        <th><%= t[2].name %></th>
+        <th><%= t[2].date %></th>
+        <th><%= t[2].cpf %></th>
+        <th><%= t[0] %></th>
+        <th><%= t[2].card %></th>
+        <th><%= t[2].value %></th>
+      </tr>
+    <% end %>
+  </table>
+  <h2 class="text-center">Saldo final: <%= @final_value %></h2>
+<% end %>

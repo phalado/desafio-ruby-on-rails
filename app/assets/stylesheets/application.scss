@@ -151,3 +151,38 @@ form {
   width: 50%;
   margin: auto;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.image img {
+  width: 50%;
+}
+
+.link-paragraph {
+  width: 60%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+}
+
+.table {
+  margin: 20px auto;
+  background-color: white;
+  padding: 5px;
+  width: 90%;
+}
+
+.titles {
+  background-color: grey;
+  color: white;
+  font-size: 20px;
+}

@@ -1,2 +1,19 @@
-<h1>Transactions#new</h1>
-<p>Find me in app/views/transactions/new.html.erb</p>
+<% if current_user.admin %>
+  <div class="index">
+    <h1>Adicionar transações</h1>
+    <div class="add-transaction">
+      <%= form_for(:uploaded_file, url: transactions_new_path) do |f| %>
+        <%= f.label 'Selecione um arquivo com trasações:' %>
+
+        <span class="select-box">
+          <%= f.file_field :attachment, :required => true %>
+        </span>
+
+        <%= f.submit "Enviar", class: "fifty-max btn" %>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  <% flash[:danger] = 'Apenas administradores podem acessar este recurso.' %>
+  <% controller.redirect_to root_url %>
+<% end %>
