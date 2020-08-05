@@ -6,10 +6,10 @@
         <% if current_user.admin %>
           <%= link_to "Selecionar arquivo", root_path, class: "header-link" %>
         <% end %>
-        <%= link_to "Log out", sessions_destroy_path, class: "header-link" %>
+        <%= link_to "Log out", logout_path, class: "header-link" %>
       <% else %>
-        <%= link_to "Log in", sessions_create_path, class: "header-link" %>
-        <%= link_to "Inscrever-se", users_new_path, class: "header-link", method: :post %>
+        <%= link_to "Log in", login_path, class: "header-link" %>
+        <%= link_to "Inscrever-se", new_user_path, class: "header-link" %>
       <% end %>
     </nav>
   </div>

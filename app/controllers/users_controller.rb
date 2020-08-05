@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:info] = 'Conta criada com sucesso.'
       log_in(@user)
-      redirect_to user_path(@user.id)
+      redirect_to root_url
     else
       render 'new'
     end

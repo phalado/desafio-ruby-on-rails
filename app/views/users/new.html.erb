@@ -1,7 +1,7 @@
 <div class="index">
-  <h1>Sign up</h1>
-  <div class="add-transaction">
-    <%= form_for(@user) do |f| %>
+  <h1>Inscrever-se</h1>
+  <div class="login-form">
+    <%= form_for(:user, url: users_new_path) do |f| %>
       <%= f.label :name, "Nome" %>
       <%= f.text_field :name, class: 'form-control' %>
 
@@ -14,7 +14,7 @@
       <%= f.label :password_confirmation, "Repita sua senha" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <%= f.submit "Enviar", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

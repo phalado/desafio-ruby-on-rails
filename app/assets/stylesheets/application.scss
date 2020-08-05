@@ -43,6 +43,7 @@ body {
 
 .form-control {
   margin-bottom: 20px;
+  height: 25px;
 }
 
 .top-navbar {
@@ -144,4 +145,9 @@ form {
   color: #fff;
   background-color: #286090;
   border-color: #204d74;
+}
+
+.login-form {
+  width: 50%;
+  margin: auto;
 }
