@@ -18,6 +18,7 @@ class TransactionsController < ApplicationController
       )
       transaction.save
     end
+    redirect_to root_url
   end
 
   def show
