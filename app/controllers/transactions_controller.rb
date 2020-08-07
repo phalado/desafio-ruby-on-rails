@@ -4,7 +4,6 @@ class TransactionsController < ApplicationController
   end
 
   def create
-    # file = File.open()
     file_data = File.read(params[:uploaded_file][:attachment])
     file_data.each_line do |line|
       transaction = Transaction.new(
@@ -14,7 +13,7 @@ class TransactionsController < ApplicationController
         cpf: line[19...30],
         card: line[30...42],
         owner: line[48...62].strip,
-        name: line[62...80].strip,
+        name: line[62...80].strip
       )
       transaction.save
     end
@@ -22,8 +21,6 @@ class TransactionsController < ApplicationController
   end
 
   def show
-    p params
-    p params['name']
     if params['user']
       user = User.find(params['user'].to_i)
       transactions = Transaction.where('owner = (?)', user.name)
@@ -32,15 +29,9 @@ class TransactionsController < ApplicationController
     end
 
     t_types = {
-      1 => ['Débito', 1],
-      2 => ['Boleto', -1],
-      3 => ['Financiamento', -1],
-      4 => ['Crédito', 1],
-      5 => ['Recebimento Empréstimo', 1],
-      6 => ['Vendas', 1],
-      7 => ['Recebimento TED', 1],
-      8 => ['Recebimento DOC', 1],
-      9 => ['Aluguel', -1],
+      1 => ['Débito', 1], 2 => ['Boleto', -1], 3 => ['Financiamento', -1],
+      4 => ['Crédito', 1], 5 => ['Recebimento Empréstimo', 1], 6 => ['Vendas', 1],
+      7 => ['Recebimento TED', 1], 8 => ['Recebimento DOC', 1], 9 => ['Aluguel', -1]
     }
 
     @final_value = 0
@@ -57,6 +48,5 @@ class TransactionsController < ApplicationController
     transactions.each do |t|
       @owners << t.owner unless @owners.include?(t.owner)
     end
-    p @owners
   end
 end

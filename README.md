@@ -1,15 +1,11 @@
 # Desafio programação - para vaga desenvolvedor Ruby on Rails
 
-Por favor leiam este documento do começo ao fim, com muita atenção.
-O intuito deste teste é avaliar seus conhecimentos técnicos, para ser mais específico em Ruby on Rails.
-O teste consiste em parsear [este arquivo de texto(CNAB)](https://github.com/ByCodersTec/desafio-ruby-on-rails/blob/master/CNAB.txt) e salvar suas informações(transações financeiras) em uma base de dados a critério do candidato.
-Este desafio deve ser feito por você em sua casa. Gaste o tempo que você quiser, porém normalmente você não deve precisar de mais do que algumas horas.
+Este repositório contém uma aplicação web para um desafio de Ruby on Rails  proposto pela empresa [bycoders_](https://github.com/ByCodersTec).
+O teste consiste em parsear [este arquivo de texto(CNAB)](https://github.com/ByCodersTec/desafio-ruby-on-rails/blob/master/CNAB.txt) e salvar suas informações(transações financeiras) em uma base de dados.
 
 # Instruções de entrega do desafio
 
-1. Primeiro, faça um fork deste projeto para sua conta no Github (crie uma se você não possuir).
-2. Em seguida, implemente o projeto tal qual descrito abaixo, em seu clone local.
-3. Por fim, envie via email um arquivo patch para seu contato na Bycoders_.
+
 
 # Descrição do projeto
 

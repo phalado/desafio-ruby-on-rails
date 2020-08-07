@@ -8,6 +8,10 @@
         <%= link_to owner, transactions_show_path(name: owner) %>
       </p>
       <% end %>
+      <% else %>
+      <p class="link-paragraph btn">
+        <%= link_to 'Clique aqui para ver suas transações', transactions_show_path(user: current_user) %>
+      </p>
     <% end %>
   <% else %>
     <h1>Olá</h1>

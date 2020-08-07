@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  email: MyString
-  password: MyString
-  password_confirmation: MyString
+admin:
+  name: Admin2
+  email: admin2@admin.com
+  password_digest: <%= User.digest('password') %>
+  admin: true
 
-two:
-  name: MyString
-  email: MyString
-  password: MyString
-  password_confirmation: MyString
+marcos:
+  name: MARCOS PEREIRA  
+  email: marcos@mercado.com
+  password_digest: <%= User.digest('password') %>
+  admin: false

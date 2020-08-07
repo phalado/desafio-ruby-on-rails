@@ -17,9 +17,9 @@
         <th><%= t[2].cpf %></th>
         <th><%= t[0] %></th>
         <th><%= t[2].card %></th>
-        <th><%= t[2].value %></th>
+        <th><%= sprintf('%.2f', t[2].value) %></th>
       </tr>
     <% end %>
   </table>
-  <h2 class="text-center">Saldo final: <%= @final_value %></h2>
+  <h2 class="text-center">Saldo final: <%= sprintf('%.2f', @final_value) %></h2>
 <% end %>
