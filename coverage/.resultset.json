@@ -1,0 +1,250 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/phalado/Dropbox/Projetos/Program/desafio-ruby-on-rails/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/phalado/Dropbox/Projetos/Program/desafio-ruby-on-rails/app/helpers/sessions_helper.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          13,
+          8,
+          5,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          8,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/phalado/Dropbox/Projetos/Program/desafio-ruby-on-rails/app/helpers/transactions_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/phalado/Dropbox/Projetos/Program/desafio-ruby-on-rails/app/helpers/users_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/phalado/Dropbox/Projetos/Program/desafio-ruby-on-rails/app/models/transaction.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/phalado/Dropbox/Projetos/Program/desafio-ruby-on-rails/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/phalado/Dropbox/Projetos/Program/desafio-ruby-on-rails/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/phalado/Dropbox/Projetos/Program/desafio-ruby-on-rails/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/phalado/Dropbox/Projetos/Program/desafio-ruby-on-rails/app/controllers/sessions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          5,
+          5,
+          4,
+          4,
+          4,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/phalado/Dropbox/Projetos/Program/desafio-ruby-on-rails/app/controllers/transactions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          2,
+          0,
+          0,
+          null,
+          2,
+          null,
+          null,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          2,
+          2,
+          2,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/phalado/Dropbox/Projetos/Program/desafio-ruby-on-rails/app/controllers/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/home/phalado/Dropbox/Projetos/Program/desafio-ruby-on-rails/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/phalado/Dropbox/Projetos/Program/desafio-ruby-on-rails/app/channels/application_cable/channel.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/phalado/Dropbox/Projetos/Program/desafio-ruby-on-rails/app/channels/application_cable/connection.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/phalado/Dropbox/Projetos/Program/desafio-ruby-on-rails/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1596891830
+  }
+}

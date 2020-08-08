@@ -36,14 +36,14 @@ RSpec.describe User, type: :model do
   end
 
   it 'is invalid if the name is too long' do
-    51.times do 
+    51.times do
       user6.name << 'a'
     end
     expect(user6.save).to be_falsy
   end
 
   it 'is invalid if the email is too long' do
-    244.times do 
+    244.times do
       user7.email << 'a'
     end
     user7.email << '@example.com'

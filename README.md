@@ -3,40 +3,68 @@
 Este repositório contém uma aplicação web para um desafio de Ruby on Rails  proposto pela empresa [bycoders_](https://github.com/ByCodersTec).
 O teste consiste em parsear [este arquivo de texto(CNAB)](https://github.com/ByCodersTec/desafio-ruby-on-rails/blob/master/CNAB.txt) e salvar suas informações(transações financeiras) em uma base de dados.
 
-# Instruções de entrega do desafio
+## Conteúdo
 
+- [Desafio programação - para vaga desenvolvedor Ruby on Rails](#desafio-programação---para-vaga-desenvolvedor-ruby-on-rails)
+  - [Conteúdo](#conteúdo)
+  - [Descrição do projeto](#descrição-do-projeto)
+  - [Como acessar](#como-acessar)
+  - [Documentação do CNAB (arquivo a ser acessado)](#documentação-do-cnab-arquivo-a-ser-acessado)
+    - [Tabela descritiva](#tabela-descritiva)
+    - [Documentação sobre os tipos das transações](#documentação-sobre-os-tipos-das-transações)
+  - [Referência e desenvolvedor](#referência-e-desenvolvedor)
 
+## Descrição do projeto
 
-# Descrição do projeto
+Este projeto consiste numa aplicação web para armazenamento e consulta de movimentação financeira por cartão de crédito de diversos estabelecimento comerciais. A forma de armazenamento dos dados é através do upload de um arquivo de texto *CNAB* e a apresentação é feita por uma tabela com os dados do estabelecimento que pode ser acessada por um administrador do sistema ou pelo proprietário do estabelecimento.
 
-Você recebeu um arquivo CNAB com os dados das movimentações finanaceira de várias lojas.
-Precisamos criar uma maneira para que estes dados sejam importados para um banco de dados.
+Nesta aplicação somente o administrador pode carregar dados e uma conta admnistradora não pode ser criada de maneira convencional.
 
-Sua tarefa é criar uma interface web que aceite upload do [arquivo CNAB](https://github.com/ByCodersTec/desafio-ruby-on-rails/blob/master/CNAB.txt), normalize os dados e armazene-os em um banco de dados relacional e exiba essas informações em tela.
+## Como acessar
 
-**Sua aplicação web DEVE:**
+Para acessar a aplicação você tem duas escolhas:
 
-1. Ter uma tela (via um formulário) para fazer o upload do arquivo(pontos extras se não usar um popular CSS Framework )
-2. Interpretar ("parsear") o arquivo recebido, normalizar os dados, e salvar corretamente a informação em um banco de dados relacional, **se atente as documentações** que estão logo abaixo.
-3. Exibir uma lista das operações importadas por lojas, e nesta lista deve conter um totalizador do saldo em conta
-4. Ser escrita obrigatoriamente em Ruby 2.0+ e Rails 5+
-5. Ser simples de configurar e rodar, funcionando em ambiente compatível com Unix (Linux ou Mac OS X). Ela deve utilizar apenas linguagens e bibliotecas livres ou gratuitas.
-6. Git com commits bem descritos
-7. PostgreSQL
-8. RUBOCOP
-9. RSPEC
-10. Simplecov para disponibilizar o code coverage
-11. Docker compose (Pontos extras se utilizar)
-12. Readme file descrevendo bem o projeto e seu setup
-13. Incluir informação descrevendo como consumir o endpoint da API
+1 - Versão online através do link https://desafio-ror-raphael.herokuapp.com/
 
-**Sua aplicação web não precisa:**
+2 - Seguindo os seguintes passos:
 
-1. Lidar com autenticação ou autorização (pontos extras se ela fizer, mais pontos extras se a autenticação for feita via OAuth).
-2. Ser escrita usando algum framework específico (mas não há nada errado em usá-los também, use o que achar melhor).
-3. Documentação da api.(Será um diferencial e pontos extras se fizer)
+- Clone ou baixe este repositório
 
-# Documentação do CNAB
+- No terminal, navegue até a pasta da aplicação
+
+- Instale as bibliotecas necessárias com 
+''''
+bundle install
+''''
+
+- Migre o banco de dados
+''''
+rails db:migrate
+''''
+
+- Adicione algumas contas de usuário com 
+''''
+rails db:seed
+''''
+
+- Você pode rodar os testes para averiguar que tudo está correto com 
+''''
+rspec
+''''
+
+- Rode 
+''''
+rails server
+''''
+
+Existem duas contas préconfiguradas no banco de dados:
+
+- Uma conta administrador com login 'admin@admin.com' e senha 'admin123'
+- Uma conta comum com login 'joao@bar.com' e senha '123456'
+
+## Documentação do CNAB (arquivo a ser acessado)
+
+### Tabela descritiva
 
 | Descrição do campo  | Inicio | Fim | Tamanho | Comentário
 | ------------- | ------------- | -----| ---- | ------
@@ -49,7 +77,7 @@ Sua tarefa é criar uma interface web que aceite upload do [arquivo CNAB](https:
 | Dono da loja | 49 | 62 | 14 | Nome do representante da loja
 | Nome loja | 63 | 81 | 19 | Nome da loja
 
-# Documentação sobre os tipos das transações
+### Documentação sobre os tipos das transações
 
 | Tipo | Descrição | Natureza | Sinal |
 | ---- | -------- | --------- | ----- |
@@ -63,21 +91,16 @@ Sua tarefa é criar uma interface web que aceite upload do [arquivo CNAB](https:
 | 8 | Recebimento DOC | Entrada | + |
 | 9 | Aluguel | Saída | - |
 
-# Avaliação
 
-Seu projeto será avaliado de acordo com os seguintes critérios.
+## Referência e desenvolvedor
 
-1. Sua aplicação preenche os requerimentos básicos?
-2. Você documentou a maneira de configurar o ambiente e rodar sua aplicação?
-3. Você seguiu as instruções de envio do desafio?
-4. Qualidade e cobertura dos testes unitários.
+Este desafio foi forkeado [deste repositório](https://github.com/ByCodersTec/desafio-ruby-on-rails)
 
-Adicionalmente, tentaremos verificar a sua familiarização com as bibliotecas padrões (standard libs), bem como sua experiência com programação orientada a objetos a partir da estrutura de seu projeto.
+Raphael Cordeiro - [GitHub][rapha-github] - [Linkedin][rapha-linkedin] - [Portfolio][rapha-personal] - [Twitter][rapha-twitter]
 
-# Referência
 
-Este desafio foi baseado neste outro desafio: https://github.com/lschallenges/data-engineering
-
----
-
-Boa sorte!
+<!-- Links -->
+[rapha-github]: https://github.com/phalado
+[rapha-twitter]: https://twitter.com/phalado
+[rapha-linkedin]: https://www.linkedin.com/in/raphael-cordeiro/
+[rapha-personal]: https://phalado.github.io/

@@ -3,15 +3,20 @@
     <h1>Olá <%= current_user.name %></h1>
     <span class="image"><%= image_tag 'joey.gif' %></span>
     <% if current_user.admin %>
-      <% @owners.each do |owner| %>
+      <% @stores.each do |store| %>
         <p class="link-paragraph btn">
-        <%= link_to owner, transactions_show_path(name: owner) %>
-      </p>
+          <%= link_to store, transactions_show_path(name: store) %>
+        </p>
       <% end %>
-      <% else %>
-      <p class="link-paragraph btn">
+    <% else %>
+      <% @stores.each do |store| %>
+        <p class="link-paragraph btn">
+          <%= link_to store, transactions_show_path(name: store) %>
+        </p>
+      <% end %>
+      <%# <p class="link-paragraph btn">
         <%= link_to 'Clique aqui para ver suas transações', transactions_show_path(user: current_user) %>
-      </p>
+      <%# </p> %>
     <% end %>
   <% else %>
     <h1>Olá</h1>

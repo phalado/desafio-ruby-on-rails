@@ -21,12 +21,7 @@ class TransactionsController < ApplicationController
   end
 
   def show
-    if params['user']
-      user = User.find(params['user'].to_i)
-      transactions = Transaction.where('owner = (?)', user.name)
-    else
-      transactions = Transaction.where('owner = (?)', params['name'])
-    end
+    transactions = Transaction.where('name = (?)', params['name'])
 
     t_types = {
       1 => ['Débito', 1], 2 => ['Boleto', -1], 3 => ['Financiamento', -1],
@@ -43,10 +38,17 @@ class TransactionsController < ApplicationController
   end
 
   def index
-    @owners = []
-    transactions = Transaction.all
-    transactions.each do |t|
-      @owners << t.owner unless @owners.include?(t.owner)
+    @stores = []
+    if session[:user_id]
+      current_user = User.find(session[:user_id])
+      if current_user.admin
+        transactions = Transaction.all
+      else
+        transactions = Transaction.where('owner = (?)', current_user.name)
+      end
+      transactions.each do |t|
+        @stores << t.name unless @stores.include?(t.name)
+      end
     end
   end
 end

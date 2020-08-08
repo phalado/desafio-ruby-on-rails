@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Transaction, type: :model do
-  T0 = Transaction.new()
+  T0 = Transaction.new
   T0.transaction_type = 1
   T0.date = '20201212'
   T0.value = 100.00
@@ -66,7 +66,7 @@ RSpec.describe Transaction, type: :model do
 
   it 'is invalid if owner length is bigger than 15' do
     T0.owner = ''
-    16.times do 
+    16.times do
       T0.owner << 'a'
     end
     expect(T0.save).to be_falsy
@@ -79,7 +79,7 @@ RSpec.describe Transaction, type: :model do
 
   it 'is invalid if owner length is bigger than 15' do
     T0.name = ''
-    19.times do 
+    19.times do
       T0.name << 'a'
     end
     expect(T0.save).to be_falsy

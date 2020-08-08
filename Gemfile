@@ -1,24 +1,25 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'bcrypt', '~> 3.1.7'
+gem 'carrierwave'
 gem 'jbuilder', '~> 2.7'
+gem 'jquery-rails'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'pg'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
-gem 'bcrypt', '~> 3.1.7'
-gem 'carrierwave'
-gem 'omniauth'
-gem 'omniauth-facebook'
-gem 'pg'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'rails-controller-testing'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -32,4 +33,5 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'simplecov', require: false
 end
